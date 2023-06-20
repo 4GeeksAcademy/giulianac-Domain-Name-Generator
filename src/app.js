@@ -1,11 +1,25 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+let pronoun = ['the','our', 'his', 'her','their'];
+let adj = ['great', 'big', 'awesome', 'crazy','pretty','incredible' ];
+let noun = ['jogger','racoon','rocket','moon','tree'];
+let extension = ['.com', '.net', '.org', '.io', '.cr', '.xyz'];
+let domainName = '';
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+//Loops every array defined above.
+for (let a = 0; a < pronoun.length; a++) {
+  for (let b = 0; b < adj.length; b++) {
+    for (let c = 0; c < noun.length; c++) {
+      for (let d = 0; d < extension.length; d++) {
+        randomPronoun = pronoun[Math.floor(Math.random() * (pronoun.length - 1))];
+        randomAdj = adj[Math.floor(Math.random() * (adj.length - 1))];
+        randomNoun = noun[Math.floor(Math.random() * (noun.length - 1))];
+        randomExtension = extension[Math.floor(Math.random() * (extension.length - 1))];
+       
+        //Redefines the domain name so it includes all the random variables.
+        domainName = randomPronoun + randomAdj + randomNoun + randomExtension;
+        
+      } 
+    }
+  }
+}
+//Prints the random domain name to the console.
+console.log(domainName);
